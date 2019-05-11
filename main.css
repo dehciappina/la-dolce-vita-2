@@ -7,8 +7,10 @@ body, p, h1, h2, h3, h4, h5 {
 }
 
 body {
+    /* opacity: 0; */
+    /* transition:opacity 1s cubic-bezier(0, 0, 0.2, 1); */
     overflow-x: hidden;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1, h2, h3 {
@@ -34,8 +36,8 @@ h1 {
     width: 100%;
     box-sizing: border-box;
     padding: 0 5vh;
-    transform: translateY(-1rem);
-    box-shadow: 0 -2vh 2vh 1vh rgba(0,0,0,0.6);
+    transform: translateY(-1.4rem);
+    box-shadow: -2vh -2vh 2vh 1vh rgba(0,0,0,0.6);
 }
 
 header {
@@ -45,18 +47,22 @@ header {
     background: rgba(225, 21, 58, 0.8);
     text-align: center;
     color: white;
-    z-index: 1;
+    z-index: 3;
 }
 
 .cover_img {
     width:100%;
     display: block;
+    position: sticky;
+    top: 0;
+    z-index: -1;
 }
 
 .products_list {
     list-style: none;
-    padding: 0;
-    margin: 0 0 1rem 0;
+    padding: 1rem 0;
+    background: white;
+    margin: -1.4rem 0 0 0;
 }
 
 .products_list li {
@@ -118,9 +124,24 @@ header {
     padding: 0 2rem;
 }
 
+.contact a {
+    width: 81%;
+    max-width: 62vh;
+    margin: 0 auto;
+    background: white;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #8b3905;
+    font-size: 0.7rem;
+    padding: 0.3rem 0;
+    border-radius: 0.2rem;
+    box-shadow: 0 0.2rem rgba(255,255,255,0.6);
+}
+
 .media_span {
     max-width: 80vh;
-    margin: 1rem auto 0 auto;
+    margin: 1rem auto;
     width: min-content;
     display: block;
 }
@@ -131,6 +152,7 @@ header {
     margin: 0.5rem 0 0 auto;
     font-size: 0.7rem;
     position: relative;
+    font-weight: 300;
 }
 
 .media_span span::before {
@@ -195,14 +217,70 @@ header {
 
 
 
-@media (min-width:100vh) {
+@media (min-width:130vh) {
 
     html {
-        font-size: calc(3vh + 1vw);
+        font-size: calc(2.5vh + 1vw);
     }
 
+    body {
+        display: flex;
+    }
+
+    header {
+        width: 72.4%;
+    }
 
     .desktop_mid_container {
-        width:50%;
+        width: 72.4%;
+        z-index: 1;
+    }
+
+    .contact {
+        width: 27.2%;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        /* box-shadow: 0 0 10vh black; */
+        height: 100vh;
+        padding-top: 8vh;
+    }
+
+    .contact h3 {
+        padding: 0 0.5rem;
+        text-shadow: none;
+    }
+
+    .cover_img {
+        height: 51.4vh;
+        object-fit: cover;
+        object-position: 0 62%;
+        position: sticky;
+        top: 0;
+        z-index: -1;
+        -webkit-mask-image: linear-gradient(black 90%, transparent);
+    }
+
+    .contact a {
+        font-size: 0.6rem;
+        padding: 0.25rem 0;
+        transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+        transition-delay: 0.1s;
+    }
+
+    .contact a:hover {
+        transform:translateY(0.2rem);
+        box-shadow: 0 0 rgba(255,255,255,0.6);
+        transition-delay: 0s;
+        background:#25D366;
+        color:white;
+    }
+
+    .contact h4 {
+        padding: 0 1rem;
+    }
+
+    .products_list {
+        background: rgba(255, 255, 255, 0.9);
     }
 }
