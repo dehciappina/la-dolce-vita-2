@@ -1,5 +1,6 @@
 const body = document.body
 ScrollReveal().reveal('.scroll_reveal');
+ScrollReveal().reveal('.scroll_reveal li');
 
 document.onreadystatechange = function () {
     if (document.readyState == "complete") {
