@@ -3,9 +3,16 @@ const body = document.body;
     // IF MOBILE
 if((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
 } else {
-    document.querySelector('#salgados_imgs').innerHTML = '<img src="assets/coxinha.jpg" alt=""><img src="assets/empada.jpg" alt=""><img src="assets/kibe.jpg" alt=""><img src="assets/torta1.jpg" alt=""><img src="assets/coxinha.jpg" alt="">';
+    document.querySelector('#empada_img').style.backgroundImage = "url('assets/empada.jpg')";
+    document.querySelector('#kibe_img').style.backgroundImage = "url('assets/kibe.jpg')";
+    document.querySelector('#torta1_img').style.backgroundImage = "url('assets/torta1.jpg')";
+    document.querySelector('#coxinha2_img').style.backgroundImage = "url('assets/coxinha.jpg')";
 
-    document.querySelector('#doces_imgs').innerHTML = '<img src="assets/brigadeiro.jpg" alt=""><img src="assets/brigadeiro.jpg" alt=""><img src="assets/brigadeiro.jpg" alt=""><img src="assets/brigadeiro.jpg" alt=""><img src="assets/brigadeiro.jpg" alt="">';
+    document.querySelector('#brigadeiro_img').style.backgroundImage = "url('assets/brigadeiro.jpg')";
+    document.querySelector('#estrela_img').style.backgroundImage = "url('assets/estrela.jpg')";
+    document.querySelector('#brigadeiro2_img').style.backgroundImage = "url('assets/brigadeiro.jpg')";
+    document.querySelector('#brigadeiro3_img').style.backgroundImage = "url('assets/brigadeiro.jpg')";
+    document.querySelector('#brigadeiro4_img').style.backgroundImage = "url('assets/brigadeiro.jpg')";
 }
 
 document.onreadystatechange = function () {
