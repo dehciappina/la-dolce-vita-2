@@ -4,7 +4,8 @@ const body = document.body;
 if((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
 } else {
     document.querySelector('#salgados_imgs').innerHTML = '<img src="assets/coxinha.jpg" alt=""><img src="assets/empada.jpg" alt=""><img src="assets/kibe.jpg" alt=""><img src="assets/torta1.jpg" alt=""><img src="assets/coxinha.jpg" alt="">';
-    console.log('desktop')
+
+    document.querySelector('#doces_imgs').innerHTML = '<img src="assets/brigadeiro.jpg" alt=""><img src="assets/brigadeiro.jpg" alt=""><img src="assets/brigadeiro.jpg" alt=""><img src="assets/brigadeiro.jpg" alt=""><img src="assets/brigadeiro.jpg" alt="">';
 }
 
 document.onreadystatechange = function () {
