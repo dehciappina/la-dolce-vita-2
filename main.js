@@ -1,8 +1,7 @@
 const body = document.body;
 
-    // IF MOBILE
-if((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
-} else {
+    // IF DESKTOP
+if (window.matchMedia("(min-width: 130vh)").matches) {
     document.querySelector('#empada_img').style.backgroundImage = "url('assets/empada.jpg')";
     document.querySelector('#kibe_img').style.backgroundImage = "url('assets/kibe.jpg')";
     document.querySelector('#torta1_img').style.backgroundImage = "url('assets/torta1.jpg')";
@@ -13,6 +12,7 @@ if((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('
     document.querySelector('#brigadeiro2_img').style.backgroundImage = "url('assets/brigadeiro.jpg')";
     document.querySelector('#brigadeiro3_img').style.backgroundImage = "url('assets/brigadeiro.jpg')";
     document.querySelector('#brigadeiro4_img').style.backgroundImage = "url('assets/brigadeiro.jpg')";
+} else {
 }
 
 document.onreadystatechange = function () {
